@@ -1,0 +1,29 @@
+.slideTest{
+    // min-width: 100%;
+    // min-height: 500px;
+    // background-color: red;
+}
+
+.slideContainer{
+  position: relative;
+  
+  img{
+    width:100%;
+    height: auto;
+  }
+}
+
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }

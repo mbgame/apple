@@ -1,0 +1,35 @@
+.productCard{
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px #999;
+    cursor: pointer;
+    min-width: 250px;
+    max-width: 250px;
+
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+    }
+
+    p{
+        text-align: center;
+        color: #777;
+        padding: 10px;
+    }
+
+    h4{
+        padding: 10px;
+    }
+
+    .features{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+    }
+    
+}
