@@ -2,6 +2,7 @@ import React from 'react';
 import './header.style.scss';
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { NavLink } from 'react-router-dom';
+import { Grid } from '@mui/material';
 
 const Menu = () => {
     return(

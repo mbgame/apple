@@ -28,7 +28,7 @@ const ProductView = ({product}) => {
     return (
         <Grid container item xs={12} justifyContent={'center'} className='productView'>
           <Grid container item xs={12} md={6} className='imageContainer'>
-            {!product ? 
+            {!product?.img ? 
             <img src="/images/products/default-product-image.png" alt="default product" />
             : 
             <img src={product?.img} alt={product?.title} />}
