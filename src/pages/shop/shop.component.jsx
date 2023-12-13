@@ -107,7 +107,7 @@ const Shop = () => {
         },
     ];
     const {productId} = useParams();
-
+console.log(productId);
     if(productId){
         const product = products.filter(product=>product.id === productId);
       return ( <ProductView product={product[0]} /> );
