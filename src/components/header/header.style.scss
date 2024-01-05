@@ -1,7 +1,27 @@
 @import '../../App.scss';
 .header{
+    position: relative;
     padding: 20px 10px;
     box-sizing: border-box;
+
+    .basketContainer{
+        position: absolute;
+        top: 70px;
+        right:0;
+        width: 0px;
+        height: auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0.9;
+        box-shadow: 0 1px 3px #444;
+        min-height: 200px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 
     .logo{
         h1{
@@ -20,7 +40,7 @@
     }
     
     .menu{
-        position: relative;
+        // position: relative;
         width: 70%;
     
         ul{

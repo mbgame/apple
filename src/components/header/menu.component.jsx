@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './header.style.scss';
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { NavLink } from 'react-router-dom';
-import { Grid } from '@mui/material';
+import { Basket } from './basket.component';
 
 const Menu = () => {
+    const [basketView,setBasketView] = useState(false);
+
+    const showBasket = () => {
+        setBasketView(!basketView);
+    }
+
     return(
         <div className='menu'>
             <ul>
@@ -13,7 +19,8 @@ const Menu = () => {
                 <li><NavLink to="/about">About</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
                 <li><NavLink to="/galley">Gallery</NavLink></li>
-                <HiOutlineShoppingCart className='basketIcon' />
+                <HiOutlineShoppingCart className='basketIcon' onClick={showBasket} />
+                <Basket basketView={basketView}  />
             </ul>
         </div>
     );
