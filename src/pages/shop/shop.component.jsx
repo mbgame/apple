@@ -24,6 +24,7 @@ const Shop = () => {
             discount:'10',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
         {
             id:'92asdh6567hjsas',
@@ -40,6 +41,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
         {
             id:'11asdh6569kjsdd',
@@ -56,6 +58,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
         {
             id:'98asdh6567hjsgf',
@@ -72,6 +75,7 @@ const Shop = () => {
             discount:'5',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
         {
             id:'56asdh6509hjsdf',
@@ -88,6 +92,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
         {
             id:'12asdh6567hjsdf',
@@ -104,6 +109,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
+            purchasedQty:0,
         },
     ];
     const {productId} = useParams();

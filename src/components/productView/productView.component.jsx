@@ -2,26 +2,24 @@ import React,{useState} from 'react';
 import './productView.style.scss';
 import { Grid,Typography, Button } from '@mui/material';
 import { FaCartPlus } from "react-icons/fa";
+import { useBasket } from '../../provider/basketProvider/basketProvider';
 
 const ProductView = ({product}) => {
-  const [items,addItems] = useState([]);
 
-    const addProduct = (e,value) => {
-      console.log('add happen')
-      addItems([...items,value]);
+  const {state:{basket},dispatch} = useBasket();
+
+  console.log("basket : ",basket);
+
+    const addProduct = (e,product) => {
+      dispatch({type:'ADD_TO_BASKET',product});
     }
 
-    const increase = (e,value) => {
-      console.log('increase happend')
-      addItems([...items,value]);
+    const increase = (e,product) => {
+      dispatch({type:'INCREASE_QUANTITY',product});
     }
 
-    const decrease = (e) => {
-      e.preventDefault();
-      const newItems = [...items];
-      newItems.pop();
-      console.log("new items : ",newItems)
-      addItems(()=>newItems);
+    const decrease = (e,product) => {
+      dispatch({type:'DECREASE_QUANTITY',product});
     }
 
     const realPrice  = product.price - ((product.price * product.discount )/100);
@@ -50,10 +48,10 @@ const ProductView = ({product}) => {
             <Grid container item xs={12} >
               <Button  variant="outlined" className='btn'>
                 {
-                  items.length ? 
+                  basket.find((item)=>item.id === product.id) ? 
                   <>
                    <span onClick={(e)=>decrease(e,product)}>-</span>
-                   {items.length }
+                   { basket?.filter(item=> item.id === product.id)[0]?.purchasedQty }
                    <span onClick={(e)=>increase(e,product)}>+</span>
                    </>
                    : 
