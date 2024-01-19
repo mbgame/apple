@@ -11,7 +11,7 @@ const Shop = () => {
     const products = [
         {
             id:'54asdh6567hjspo',
-            title:'',
+            title:'the best shoes',
             shortDesc:'this is a small shoes',
             desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             img:'/images/products/shoes/shoes1.jpg',
@@ -24,7 +24,7 @@ const Shop = () => {
             discount:'10',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
         {
             id:'92asdh6567hjsas',
@@ -41,7 +41,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
         {
             id:'11asdh6569kjsdd',
@@ -58,7 +58,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
         {
             id:'98asdh6567hjsgf',
@@ -75,7 +75,7 @@ const Shop = () => {
             discount:'5',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
         {
             id:'56asdh6509hjsdf',
@@ -92,7 +92,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
         {
             id:'12asdh6567hjsdf',
@@ -109,7 +109,7 @@ const Shop = () => {
             discount:'0',
             group:'clothes',
             subGroup:'shoes',
-            purchasedQty:0,
+            quantity:100,
         },
     ];
     const {productId} = useParams();
