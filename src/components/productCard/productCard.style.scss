@@ -6,6 +6,11 @@
     min-width: 250px;
     max-width: 250px;
     overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover{
+        transform: scale(1.05);
+    }
 
     .discount{
         position: absolute;

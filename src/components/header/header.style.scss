@@ -1,16 +1,23 @@
 @import '../../App.scss';
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+  }
+
 .header{
-    position: relative;
     padding: 20px 10px;
     box-sizing: border-box;
+    position: relative;
 
-    .basketContainer{
+    .basket-container{
         position: absolute;
-        top: 70px;
-        right:0;
-        width: 0px;
-        height: auto;
-        background-color: white;
+        top:70px;
+        right: 0;
+        width: 0;
+        height: 0;
+        background-color: rgb(255, 255, 255);
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -18,38 +25,117 @@
         flex-direction: column;
         overflow: hidden;
         opacity: 0.9;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 1px 3px #444;
         min-height: 200px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        .basketHead{
+            min-width: 100%;
+            background-color: green;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+
+            p {
+                @include flex-center();
+                &:first-child {
+                  min-width: 25px;
+                }
+                &:nth-child(2) {
+                  min-width: 25px;
+                }
+                &:nth-child(3) {
+                    min-width: 130px;
+                }
+                &:nth-child(4) {
+                    min-width: 50px;
+                }
+                &:nth-child(5) {
+                    min-width: 50px;
+                }
+                &:nth-child(6) {
+                    min-width: 100px;
+                }
+              }
+
+        }
 
         .basketItem{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             align-items: center;
             min-width: 100%;
-            // background-color: red;
+            width: 100%;
+            height: 50px;
+
+            p {
+                @include flex-center();
+                &:first-child {
+                  min-width: 25px;
+                }
+                &:nth-child(2) {
+                  min-width: 25px;
+                }
+                &:nth-child(3) {
+                    min-width: 50px;
+                }
+                &:nth-child(4) {
+                    min-width: 50px;
+                }
+                &:nth-child(5) {
+                    min-width: 50px;
+                }
+                &:nth-child(6) {
+                    min-width: 100px;
+                }
+              }
+
+            h4{
+                    text-align: center;
+                    align-items: center;
+                    justify-content: flex-start;
+                    min-width: 130px;
+            }
+            
+            &:hover{
+                cursor: pointer;
+                background-color: #bbb;
+            }
         }
 
-        .basketHead{
+        .emptyBasket{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            min-width: 100%;
-            background-color: rgb(43, 43, 43);
-            color: white;
-            padding:5px;
+            flex-direction: column;
+            padding: 10px 0;
+
+            img{
+                width: 50%;
+                height: auto;
+            }
+        }
+
+        .removeItem{
+            color:red;
+            transition: color 0.4s ease-in;
+            &:hover{
+                cursor:pointer;
+                color:rgb(83, 12, 12);
+            }
         }
     }
 
     .logo{
         h1{
-            font-size: 36px;
-            font-family: cursive;
+            font-size: 46px;
+            font-family: 'Dancing Script', cursive;
             background: -webkit-linear-gradient(#34248e, rgb(233, 89, 233));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            border-right: 1px solid rgb(225, 0, 255);
-            border-bottom: 3px solid rgb(132, 28, 56);
+            // border-right: 1px solid rgb(225, 0, 255);
+            // border-bottom: 3px solid rgb(132, 28, 56);
             padding: 10px;
             padding-top: 0;
             box-sizing: border-box;

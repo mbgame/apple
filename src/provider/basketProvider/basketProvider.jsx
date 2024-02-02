@@ -8,12 +8,10 @@ export const useBasket = () => {
 
 const initialState = {
   basket: [],
-  user:[]
 };
 
 const basketReducer = (state, action) => {
   switch (action.type) {
-
     case 'ADD_TO_BASKET':
       return {
         ...state,

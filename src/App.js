@@ -9,15 +9,15 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <BasketProvider>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />}/>
-          <Route path="/shop/:productId" element={<Shop />}/>
-          <Route path="/contact" element={<h1>CONTACT</h1>} />
-          <Route path="/about" element={<h1>ABOUT</h1>} />
-          <Route path="/gallery" element={<h1>Gallery</h1>} />
-        </Routes>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />}/>
+        <Route path="/shop/:productId" element={<Shop />}/>
+        <Route path="/contact" element={<h1>CONTACT</h1>} />
+        <Route path="/about" element={<h1>ABOUT</h1>} />
+        <Route path="/gallery" element={<h1>Gallery</h1>} />
+      </Routes>
       </BasketProvider>
     </BrowserRouter>
   );

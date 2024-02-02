@@ -1,13 +1,11 @@
 import React from 'react';
 import './shop.style.scss';
-// import {Grid} from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { ProductCard } from '../../components/productCard/productCard.component';
 import { ProductView } from '../../components/productView/productView.component';
 
-
-
 const Shop = () => {
+
     const products = [
         {
             id:'54asdh6567hjspo',
@@ -113,7 +111,7 @@ const Shop = () => {
         },
     ];
     const {productId} = useParams();
-console.log(productId);
+
     if(productId){
         const product = products.filter(product=>product.id === productId);
       return ( <ProductView product={product[0]} /> );
