@@ -1,7 +1,7 @@
 import React from  'react';
 import './header.style.scss';
 import { useBasket } from '../../provider/basketProvider/basketProvider';
-import {Grid,Typography} from '@mui/material';
+import {Grid,Typography, Button} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { MdRemoveShoppingCart } from "react-icons/md";
 
@@ -41,6 +41,7 @@ const Basket = (props) => {
                 <p>There is no Item in the Basket</p>
                 <img src="/images/empty-basket.jpg" />
             </div>}
+            <Button onClick={()=>navigate("/cart")} variant='outlined' className='button'>checkout</Button>
         </div>
     );
 }

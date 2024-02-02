@@ -11,6 +11,11 @@
     box-sizing: border-box;
     position: relative;
 
+    .button{
+        width: 90%;
+        background-color: aliceblue;
+    }
+
     .basket-container{
         position: absolute;
         top:70px;
